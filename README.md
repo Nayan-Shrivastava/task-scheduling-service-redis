@@ -12,7 +12,7 @@ The Task Scheduling Service efficiently manages a Job queue, enabling the schedu
 
 ##### How events are triggered ?
 
-![](https://github.com/Nayan-Shrivastava/task-scheduling-service-redis/scheduler-msc/blob/master/images/event_trigger.png)
+![](hhttps://github.com/Nayan-Shrivastava/task-scheduling-service-redis/blob/master/images/event_trigger.png)
 
 For the Job Queue, We use a Sorted Set which keeps a list of strings sorted based on the respective numerical score. We use a string < Event Type > + < Event Id> for value and the date/time in seconds for score.
 
@@ -27,7 +27,7 @@ Every 10 seconds, All events with score less than current time are fetched and a
 
 ##### What Action to perform ?
 
-![](https://github.com/Nayan-Shrivastava/task-scheduling-service-redis/blob/master/images/action-perform.png)
+![](https://github.com/Nayan-Shrivastava/task-scheduling-service-redis/blob/master/images/action_perform.png)
 
 In the triggerEvent Function, One can customize the actions to be performed for a specific event using the switch case in the function. Here we perform different API calls with different payload for different event types.
 
